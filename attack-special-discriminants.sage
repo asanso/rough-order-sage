@@ -10,7 +10,7 @@ a_bits = 24
 D,z = get_prime(a_bits)
 k = -16*D
 E = EllipticCurve([0,k]) 
-print("Discriminant ", k)
+print("Discriminant ", -D)
 we = E.root_number()
 if we == 1:
     print("ROUGH ORDER ASSUMPTION VIOLATED!!")
