@@ -11,4 +11,8 @@ D,z = get_prime(24)
 k = -16*D
 E = EllipticCurve([0,k]) 
 print("Discriminant ", k)
-
+we = E.root_number()
+if we == 1:
+    print("rough order assumption violated")
+else:
+    print("program ended")
