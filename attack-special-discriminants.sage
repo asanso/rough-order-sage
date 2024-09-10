@@ -6,13 +6,15 @@ def get_prime(a_bits):
         if p in Primes():
             return p,z
 
-
-D,z = get_prime(24)
+a_bits = 24
+D,z = get_prime(a_bits)
 k = -16*D
 E = EllipticCurve([0,k]) 
 print("Discriminant ", k)
 we = E.root_number()
 if we == 1:
-    print("rough order assumption violated")
+    print("ROUGH ORDER ASSUMPTION VIOLATED!!")
+    if a_bits <30:
+        print(pari('Vec(ellrank(ellinit([0,%s])))'%(k)))
 else:
     print("program ended")
