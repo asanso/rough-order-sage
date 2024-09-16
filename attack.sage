@@ -20,7 +20,7 @@ def mestre_nagao_heuristic(p,k, r):
     n_bits -- number of bits of the discriminant
      
     OUTPUT:
-    sum, the  Mestre-Nagao score"""
+    sum, The Mestre-Nagao score"""
     sum = 0
     for i in range(r):
         try:
@@ -39,8 +39,9 @@ D = get_prime(n_bits)
 k = -16*D
 E = EllipticCurve([0,k]) 
 print("Discriminant ", -D)
-
 score = mestre_nagao_heuristic(2, k,1000)
-#print(pari('Vec(ellrank(ellinit([0,%s])))'%(k)))
+print("The Mestre-Nagao score is ", scpre)
+if n_bits <30:
+        print(pari('Vec(ellrank(ellinit([0,%s])))'%(k)))
 if score >= 4:
     print("found")
