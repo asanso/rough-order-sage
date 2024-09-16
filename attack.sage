@@ -1,10 +1,26 @@
 def get_prime(n_bits):
+    """
+    get_prime(a)
+
+    INPUT:
+    n_bits -- number of bits of the discriminant
+     
+    OUTPUT:
+    p, a prime discriminant D such that p=3 mod 4"""
     while True:
         D = next_prime(ZZ.random_element(2^n_bits))
         if D%4 == 3:
             return D
         
-def mestre_nagao(p,k, r):
+def mestre_nagao_heuristic(p,k, r):
+    """
+    mestre_nagao_heuristic(p,k, r)
+
+    INPUT:
+    n_bits -- number of bits of the discriminant
+     
+    OUTPUT:
+    sum, the  Mestre-Nagao score"""
     sum = 0
     for i in range(r):
         try:
@@ -24,8 +40,8 @@ k = -16*D
 E = EllipticCurve([0,k]) 
 print("Discriminant ", -D)
 
-mn = mestre_nagao(2, k,1000)
-print(pari('Vec(ellrank(ellinit([0,%s])))'%(k)))
+score = mestre_nagao_heuristic(2, k,1000)
+#print(pari('Vec(ellrank(ellinit([0,%s])))'%(k)))
 print(mn)
-if mn>=4:
+if score >= 4:
     print("found")

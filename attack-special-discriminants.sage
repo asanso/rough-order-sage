@@ -6,7 +6,7 @@ def get_prime(n_bits):
     n_bits -- number of bits of the discriminant
      
     OUTPUT:
-    p, a discriminant p as described in Subsection 3.1 of the papers"""
+    p, a prime discriminant p as described in Subsection 3.1 of the papers"""
 
     a = -4
     while True:
