@@ -1,10 +1,9 @@
-def get_prime(a_bits):
+def get_prime(n_bits):
     while True:
-        D = next_prime(ZZ.random_element(2^a_bits))
+        D = next_prime(ZZ.random_element(2^n_bits))
         if D%4 == 3:
             return D
         
-
 def mestre_nagao(p,k, r):
     sum = 0
     for i in range(r):
@@ -19,8 +18,8 @@ def mestre_nagao(p,k, r):
             print("singular")
     return sum
 
-a_bits = 24
-D = get_prime(a_bits)
+n_bits = 24
+D = get_prime(n_bits)
 k = -16*D
 E = EllipticCurve([0,k]) 
 print("Discriminant ", -D)
