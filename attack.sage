@@ -28,4 +28,4 @@ mn = mestre_nagao(2, k,1000)
 print(pari('Vec(ellrank(ellinit([0,%s])))'%(k)))
 print(mn)
 if mn>=4:
-    print("je")
+    print("found")
