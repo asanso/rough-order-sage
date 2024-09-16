@@ -40,7 +40,7 @@ k = -16*D
 E = EllipticCurve([0,k]) 
 print("Discriminant ", -D)
 score = mestre_nagao_heuristic(2, k,1000)
-print("The Mestre-Nagao score is ", scpre)
+print("The Mestre-Nagao score is ", score)
 if n_bits <30:
         print(pari('Vec(ellrank(ellinit([0,%s])))'%(k)))
 if score >= 4:
