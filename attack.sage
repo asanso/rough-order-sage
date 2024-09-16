@@ -42,6 +42,5 @@ print("Discriminant ", -D)
 
 score = mestre_nagao_heuristic(2, k,1000)
 #print(pari('Vec(ellrank(ellinit([0,%s])))'%(k)))
-print(mn)
 if score >= 4:
     print("found")
