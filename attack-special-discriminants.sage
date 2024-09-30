@@ -10,12 +10,12 @@ def get_prime(n_bits):
 
     a = -4
     while True:
-        z = ZZ.random_element(2^n_bits)
+        z = ZZ.random_element(2^(n_bits/2))
         p = (3/4*z^2+a)
         if p in Primes():
             return p,z
 
-n_bits = 24
+n_bits = 1024
 D,z = get_prime(n_bits)
 k = -16*D
 E = EllipticCurve([0,k]) 
