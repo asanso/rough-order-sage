@@ -34,7 +34,7 @@ def mestre_nagao_heuristic(p,k, r):
             print("singular")
     return sum
 
-n_bits = 24
+n_bits = 1024
 D = get_prime(n_bits)
 k = -16*D
 E = EllipticCurve([0,k]) 
